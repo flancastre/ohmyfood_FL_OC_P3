@@ -1,3 +1,36 @@
+@font-face {
+  font-family: "roboto";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "shrikhand";
+  src: url(../fonts/Shrikhand-Regular.ttf);
+}
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   min-height: 100vh;
+}
+header {
+  text-align: center;
+  padding: 12px;
+}
+header img {
+  width: 150px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #EAEAEA;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.search p {
+  font-family: roboto-bold, sans-serif;
 }/*# sourceMappingURL=index.css.map */

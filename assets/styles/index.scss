@@ -1,7 +1,4 @@
-body {
-    // background: red;
-    min-height: 100vh;
-    &:hover {
-        // background: blue;
-    }
-}
+@import "./settings";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./pages/home";
