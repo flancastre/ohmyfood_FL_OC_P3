@@ -28,32 +28,29 @@ font-family: $font2;
     p{
         text-align: center;
     }
-
-    button{
-        width: 50%;
-        margin: 15px auto;
+    
+    
+    a{
+        text-align: center;
+        text-decoration: none;
         color: white;
-        padding: 12px;
-        border-radius: 25px;
-        border-style: none;
-        background: linear-gradient(#FF79DA,#9356DC);
-        cursor: pointer;
-        transition: 0.3s;
-        &:hover{
-            transition: 0.3s;
-            filter: brightness(120%);
-           
-            
-        }
-
-        #resto{
-            text-align: center;
-        }
-
-        a{
         
-            text-decoration: none;
-            color: white;
+            button{
+                width: 50%;
+                margin: 15px auto;
+                color: white;
+                padding: 12px;
+                border-radius: 25px;
+                border-style: none;
+                background: linear-gradient(#FF79DA,#9356DC);
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover{
+                    transition: 0.3s;
+                    filter: brightness(120%);
+                   
+                    
+                }
         }
     }
 
@@ -263,8 +260,11 @@ margin-right: 5px;
         color: inherit
     }
   .section_1{
-    button{
-        width: 15%;
+    a{
+
+        button{
+            width: 15%;
+        }
     }
   }
 

@@ -56,7 +56,12 @@ header img {
 .section_1 p {
   text-align: center;
 }
-.section_1 button {
+.section_1 a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+.section_1 a button {
   width: 50%;
   margin: 15px auto;
   color: white;
@@ -67,16 +72,9 @@ header img {
   cursor: pointer;
   transition: 0.3s;
 }
-.section_1 button:hover {
+.section_1 a button:hover {
   transition: 0.3s;
   filter: brightness(120%);
-}
-.section_1 button #resto {
-  text-align: center;
-}
-.section_1 button a {
-  text-decoration: none;
-  color: white;
 }
 
 .section_2 {
@@ -248,7 +246,7 @@ footer ul li img {
   body {
     color: inherit;
   }
-  .section_1 button {
+  .section_1 a button {
     width: 15%;
   }
   .section_2 {
