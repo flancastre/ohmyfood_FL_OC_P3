@@ -68,8 +68,11 @@ header img {
   transition: 0.3s;
 }
 .section_1 button:hover {
-  transition: 0.3;
+  transition: 0.3s;
   filter: brightness(120%);
+}
+.section_1 button #resto {
+  text-align: center;
 }
 .section_1 button a {
   text-decoration: none;
@@ -331,7 +334,7 @@ footer ul li img {
   transition: 0.3s;
 }
 .menu_contain button:hover {
-  transition: 0.3;
+  transition: 0.3s;
   filter: brightness(120%);
 }
 .menu_contain h3 {

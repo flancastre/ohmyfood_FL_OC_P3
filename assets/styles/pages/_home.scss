@@ -40,17 +40,23 @@ font-family: $font2;
         cursor: pointer;
         transition: 0.3s;
         &:hover{
-            transition: 0.3;
+            transition: 0.3s;
             filter: brightness(120%);
            
             
         }
 
+        #resto{
+            text-align: center;
+        }
+
         a{
+        
             text-decoration: none;
             color: white;
         }
     }
+
 }
 
 .section_2{
