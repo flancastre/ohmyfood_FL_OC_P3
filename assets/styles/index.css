@@ -26,6 +26,10 @@ header img {
   width: 150px;
 }
 
+#mail_link {
+  color: white;
+}
+
 .search {
   display: flex;
   justify-content: center;
@@ -237,6 +241,54 @@ footer ul li img {
   animation: showContent 0s 3s forwards;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    color: inherit;
+  }
+  .section_1 button {
+    width: 15%;
+  }
+  .section_2 {
+    max-width: 1550px;
+    margin: auto;
+  }
+  .section_2 .step {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+  }
+  .section_2 .step p {
+    width: 120%;
+  }
+  .section_3_contain {
+    max-width: 1550px;
+    margin: auto;
+  }
+  .section_3_contain .section_3_resto_contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .section_3_contain .section_3_resto_contain a {
+    margin: auto;
+  }
+  .section_3_contain .section_3_resto_contain a .card {
+    min-height: 30px;
+    min-width: 700px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    gap: 32px;
+  }
+  footer ul {
+    display: flex;
+    margin-right: 5px;
+    gap: 10px;
+  }
+}
 .resto_header {
   position: relative;
 }
@@ -317,6 +369,13 @@ footer ul li img {
 .menu_contain .starter {
   margin-bottom: 15px;
 }
+.menu_contain .starter #testover {
+  border: solid 1px black;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu_contain .starter h3 {
   position: relative;
   display: inline-block;
@@ -330,55 +389,87 @@ footer ul li img {
   left: 0; /* Pour centrer la bordure */
   bottom: -5px; /* Ajuste cet espace selon l'espace souhaité entre le texte et la bordure */
 }
-.menu_contain .starter .menu_card {
+.menu_contain .starter .menu-item {
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 10px 0;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
-  overflow: hidden;
-  position: relative;
-}
-.menu_contain .starter .menu_card:hover .check_order {
-  margin-right: 0rem;
-  transition: all 0.3s;
-}
-.menu_contain .starter .menu_card:hover #price {
-  position: relative;
-  transition: all 0.3s;
-}
-.menu_contain .starter .menu_card span {
-  font-weight: bold;
   padding: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: padding-right 0.3s ease-in-out;
 }
-.menu_contain .starter .menu_card div {
+.menu_contain .starter .menu-item:hover {
+  padding-right: 70px;
+}
+.menu_contain .starter .menu-item .menu-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: margin-right 0.3s ease-in-out;
+}
+.menu_contain .starter .menu-item .menu-info .menu-details {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  line-height: 10px;
-  padding: 12px;
+  overflow: hidden;
+  line-height: 1.5rem;
+}
+.menu_contain .starter .menu-item .menu-info .menu-details .menu-title {
+  font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-right: 10px;
+  transition: max-width 0.3s ease-in-out;
 }
-.menu_contain .starter .menu_card #price {
-  align-self: end;
+.menu_contain .starter .menu-item .menu-info .menu-details .menu-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9em;
+  color: #666;
+  margin-right: 10px;
+  transition: max-width 0.3s ease-in-out;
+}
+.menu_contain .starter .menu-item .menu-info .menu-price {
+  flex-shrink: 0;
+  margin-left: 10px;
+  font-weight: bold;
+  align-self: flex-end;
+}
+.menu_contain .starter .menu-item .menu-action {
   position: absolute;
-  right: 0;
-  transition: all 0.3s;
-}
-.menu_contain .starter .menu_card .check_order {
+  right: 0px;
+  top: 50%;
   display: flex;
-  width: 50px;
   justify-content: center;
   align-items: center;
+  transform: translateY(-50%) translateX(100%);
   background-color: #99E2D0;
-  margin-right: -5rem;
-  transition: all 0.3s;
-}
-.menu_contain .starter .menu_card .check_order i {
-  font-size: x-large;
   color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  height: 100%;
+  width: 10%;
+}
+.menu_contain .starter .menu-item .menu-action i {
+  display: block;
+  color: white;
+}
+.menu_contain .starter .menu-item:hover .menu-action {
+  transform: translateY(-50%) translateX(10%);
+  opacity: 1;
+}
+.menu_contain .starter .menu-item:hover .menu-info .menu-title, .menu_contain .starter .menu-item:hover .menu-info .menu-description {
+  max-width: calc(100% - 60px);
 }
 
 #start {
@@ -406,5 +497,35 @@ footer ul li img {
 @keyframes check {
   100% {
     transform: translateX(0);
+  }
+}
+@media screen and (min-width: 700px) {
+  .menu_contain button {
+    width: 20%;
+  }
+  .menu_contain .title {
+    justify-content: center;
+  }
+  .menu_contain .menu-item:hover .menu-price {
+    margin-right: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu_contain {
+    width: 80%;
+    margin: -50px auto 0;
+  }
+  .menu_contain button {
+    width: 20%;
+  }
+  .menu_contain .title {
+    justify-content: center;
+  }
+  .menu_contain .starter {
+    width: 60%;
+    margin: auto;
+  }
+  .menu_contain .starter .menu-item:hover .menu-price {
+    margin-right: 50px;
   }
 }/*# sourceMappingURL=index.css.map */

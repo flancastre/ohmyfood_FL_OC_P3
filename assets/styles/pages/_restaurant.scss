@@ -93,6 +93,16 @@
 
     .starter{
         margin-bottom: 15px;
+
+        #testover{
+            border: solid 1px black;
+            width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+
         h3 {
             position: relative;
             display: inline-block;
@@ -107,75 +117,103 @@
             bottom: -5px; /* Ajuste cet espace selon l'espace souhaité entre le texte et la bordure */
         }
   
-        .menu_card {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
+    
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: padding-right 0.3s ease-in-out;
+  
+    &:hover {
+      padding-right: 70px; // Ajuster selon la largeur de .menu-action
+    }
+  
+    .menu-info {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+      transition: margin-right 0.3s ease-in-out;
+  
+      .menu-details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        line-height: 1.5rem;
+  
+        .menu-title {
+            font-weight: bold;
             // padding: 12px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0px 4.01px 15.04px 0px #0000001A;
-            overflow: hidden;
-            position: relative;
-            &:hover{
-                .check_order {
-                    margin-right: 0rem;
-                    transition: all 0.3s;
-                }
-                #price {
-                    position: relative;
-                    // right: 100px;
-                    transition: all 0.3s;
-                }
-
-                // div{
-                //     width: 50px;
-                // }
-            }
-
-           
-            span{
-                font-weight: bold;
-                padding: 12px;
-            }
-        
-            div{
-                display: flex;
-                flex-direction: column;
-                line-height: 10px;
-                padding: 12px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                
-              
-                
-            }
-            #price{
-                align-self: end;
-                position: absolute;
-                right: 0;
-                transition: all 0.3s ;
-            }
-
-            .check_order{
-                
-                display: flex;
-                width: 50px;
-                justify-content: center;
-                align-items: center;
-                background-color: $color3;
-                margin-right: -5rem;
-                transition: all 0.3s;
-
-               
-                i{
-                    font-size: x-large;
-                    color: white;
-                }
-             
-            }
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-right: 10px;
+          transition: max-width 0.3s ease-in-out;
         }
+  
+        .menu-description {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 0.9em;
+          color: #666;
+          margin-right: 10px;
+          transition: max-width 0.3s ease-in-out;
+        }
+      }
+  
+      .menu-price {
+        flex-shrink: 0;
+        margin-left: 10px;
+        font-weight: bold;
+        align-self: flex-end;
+      }
+    }
+  
+    .menu-action {
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-50%) translateX(100%);
+      background-color: $color3;
+      color: white;
+      padding: 5px 10px;
+    //   border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      opacity: 0; // Masquer par défaut
+      height: 100%;
+      width: 10%;
+  
+      i {
+        display: block;
+        color: white;
+      }
+    }
+  
+    &:hover .menu-action {
+      transform: translateY(-50%) translateX(10%);
+      opacity: 1; // Afficher au survol
+    }
+  
+    &:hover .menu-info .menu-title,
+    &:hover .menu-info .menu-description {
+      max-width: calc(100% - 60px); // Ajuster selon la largeur de .menu-action
+    }
+  }
+  
 
     }
 
@@ -214,3 +252,63 @@
         transform: translateX(0);
     }
 }
+
+
+// ----------Tablette -------------
+
+@media screen and (min-width: 700px) {
+    .menu_contain {
+        button{
+            width: 20%;
+        }
+
+        .title{
+            justify-content: center;
+        }
+        
+        .menu-item{
+            &:hover{
+                .menu-price{
+                    margin-right: 50px;
+                    
+            }
+        }
+    }
+}
+    
+  }
+
+//   -------- Desktop ---------- 
+
+
+  @media screen and (min-width: 1024px) {
+
+    .menu_contain{
+        width: 80%;
+        margin: -50px auto 0;
+        button{
+            width: 20%;
+        }
+
+        .title{
+            justify-content: center;
+        }
+
+        .starter {
+            width: 60%;
+            margin: auto;
+            .menu-item{
+                &:hover{
+                    .menu-price{
+                        margin-right: 50px;
+                    
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
+  }

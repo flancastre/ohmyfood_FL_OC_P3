@@ -235,3 +235,82 @@ margin-right: 5px;
   visibility: hidden;
   animation: showContent 0s 3s forwards;
 }
+
+
+// ---------- Tablette ----------------
+
+
+@media screen and (min-width: 640px) {
+
+    body{
+        // color:blue;
+    }
+ }
+
+
+
+ //------------ Desktop ----------------
+
+ @media screen and (min-width: 1024px) {
+
+    body{
+        color: inherit
+    }
+  .section_1{
+    button{
+        width: 15%;
+    }
+  }
+
+  .section_2 {
+    max-width: 1550px;
+    margin: auto;
+    .step{
+        flex-direction: row;
+        justify-content: center;
+        gap: 10%;
+
+        p{
+            width: 120%;
+        }
+    }
+  }
+
+  .section_3_contain{
+    max-width: 1550px;
+    margin: auto;
+
+    .section_3_resto_contain{
+
+        display: flex;
+        flex-wrap: wrap;    
+        justify-content: space-between;
+
+        // gap: 10%;
+        ;
+a{
+    margin: auto;
+    .card {
+        min-height: 30px;
+        min-width: 700px;
+    }
+}
+
+    }
+  }
+
+  footer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    gap: 32px;
+  
+    ul{
+        display: flex;
+        margin-right: 5px;
+        gap: 10px;
+    }
+  }
+    
+ }
