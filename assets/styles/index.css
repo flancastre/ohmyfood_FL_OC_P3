@@ -454,7 +454,7 @@ footer ul li img {
   color: white;
   padding: 5px 10px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s;
   opacity: 0;
   height: 100%;
   width: 10%;
